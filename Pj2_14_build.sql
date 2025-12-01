@@ -2092,6 +2092,7 @@ VALUES
 ------------------------------------------------------------
 -- Sections for Fall 2025 and Spring 2026
 ------------------------------------------------------------
+/*
 INSERT INTO Bellini.Section (CourseID, TermID, SectionNumber, CRN, Type, Status, Capacity, Location, Schedule, InstructorID)
 VALUES
     (@COP2510_ID, @TERM_FALL_2025,  '001', 92001, 'Lecture', 'Open',   30, 'ENB 109', 'MW 09:30-10:45', @INSTRUCTOR_1),
@@ -2111,12 +2112,12 @@ SELECT @S_F25_CIS4622 = SectionID FROM Bellini.Section WHERE CRN=92004;
 
 SELECT @S_S26_COP2510 = SectionID FROM Bellini.Section WHERE CRN=93001;
 SELECT @S_S26_COP3515 = SectionID FROM Bellini.Section WHERE CRN=93002;
-
+*/
 
 ------------------------------------------------------------
 -- Enrollment: Fall 2025 (with grades)
 ------------------------------------------------------------
-
+/*
 -- COP2510 Fall 2025
 INSERT INTO Bellini.Enrollment (SectionID, StudentID, EnrollDate, EnrollmentStatus, LetterGrade, NumericGrade, GradePoints)
 SELECT @S_F25_COP2510, s.StudentID, '2025-08-27', 'Completed', 'A', 95.00, 4.00
@@ -2170,12 +2171,11 @@ WHERE s.USF_ID IN ('U000000006','U000000007');
 
 
 -- TA Assignments: at least 2 students as TAs for a Fall 2025 class
-
 INSERT INTO Bellini.TAAssignment (SectionID, StudentID, Role)
 VALUES
-(@S_F25_COP3515, @TA_1, 'TA'),
-(@S_F25_COP3515, @TA_2, 'TA');
-
+    (@S_F25_COP3515, @TA_1, 'TA'),
+    (@S_F25_COP3515, @TA_2, 'TA');
+*/
 
 ------------------------------------------------------------
 -- StudyPlans
