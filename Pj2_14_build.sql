@@ -2116,7 +2116,6 @@ SELECT @S_S26_COP3515 = SectionID FROM Bellini.Section WHERE CRN=93002;
 ------------------------------------------------------------
 -- Enrollment: Fall 2025 (with grades)
 ------------------------------------------------------------
-/*
 -- COP2510 Fall 2025
 INSERT INTO Bellini.Enrollment (SectionID, StudentID, EnrollDate, EnrollmentStatus, LetterGrade, NumericGrade, GradePoints)
 SELECT @S_F25_COP2510, s.StudentID, '2025-08-27', 'Completed', 'A', 95.00, 4.00
@@ -2174,7 +2173,7 @@ INSERT INTO Bellini.TAAssignment (SectionID, StudentID, Role)
 VALUES
     (@S_F25_COP3515, @TA_1, 'TA'),
     (@S_F25_COP3515, @TA_2, 'TA');
-*/
+
 
 ------------------------------------------------------------
 -- StudyPlans

@@ -115,7 +115,7 @@ SELECT
     c.Credits,
     c.CourseDescription
 FROM Bellini.Course c
-WHERE c.CoursePrefix = 'COP' AND c.CourseNumber = 3515;
+WHERE c.CoursePrefix = 'CAP' AND c.CourseNumber = '4034';
 
 SELECT 
     p.CoursePrefix AS PrereqPrefix,
@@ -124,7 +124,7 @@ SELECT
 FROM Bellini.CoursePrereq cp
 JOIN Bellini.Course p ON cp.PrereqCourseID = p.CourseID
 JOIN Bellini.Course c ON cp.CourseID = c.CourseID
-WHERE c.CoursePrefix = 'COP' AND c.CourseNumber = 3515;
+WHERE c.CoursePrefix = 'CAP' AND c.CourseNumber = '4034';
 
 SELECT 
     p.CoursePrefix AS CoreqPrefix,
@@ -132,7 +132,7 @@ SELECT
 FROM Bellini.CourseCoreq cc
 JOIN Bellini.Course p ON cc.CoreqCourseID = p.CourseID
 JOIN Bellini.Course c ON cc.CourseID = c.CourseID
-WHERE c.CoursePrefix = 'COP' AND c.CourseNumber = 3515;
+WHERE c.CoursePrefix = 'CAP' AND c.CourseNumber = '4034';
 
 
 ------------------------------------------------------------
