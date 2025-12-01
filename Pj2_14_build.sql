@@ -2092,18 +2092,17 @@ VALUES
 ------------------------------------------------------------
 -- Sections for Fall 2025 and Spring 2026
 ------------------------------------------------------------
-/*
 INSERT INTO Bellini.Section (CourseID, TermID, SectionNumber, CRN, Type, Status, Capacity, Location, Schedule, InstructorID)
 VALUES
-    (@COP2510_ID, @TERM_FALL_2025,  '001', 92001, 'Lecture', 'Open',   30, 'ENB 109', 'MW 09:30-10:45', @INSTRUCTOR_1),
-    (@COP3515_ID, @TERM_FALL_2025,  '001', 92002, 'Lecture', 'Open',   30, 'ENB 110', 'TR 11:00-12:15', @INSTRUCTOR_2),
-    (@CIS4250_ID, @TERM_FALL_2025,  '001', 92003, 'Lecture', 'Closed', 25, 'ENB 111', 'MW 12:30-13:45', @INSTRUCTOR_3),
-    (@CIS4622_ID, @TERM_FALL_2025,  '001', 92004, 'Lecture', 'Open',   20, 'ENB 112', 'TR 14:00-15:15', @INSTRUCTOR_3),
+    (@COURSE_COP_2510, @TERM_FALL_2025,  '001', 92001, 'Lecture', 'Open',   30, 'ENB 109', 'MW 09:30-10:45', @INSTRUCTOR_1),
+    (@COURSE_COP_3515, @TERM_FALL_2025,  '001', 92002, 'Lecture', 'Open',   30, 'ENB 110', 'TR 11:00-12:15', @INSTRUCTOR_2),
+    (@COURSE_CIS_4250, @TERM_FALL_2025,  '001', 92003, 'Lecture', 'Closed', 25, 'ENB 111', 'MW 12:30-13:45', @INSTRUCTOR_3),
+    (@COURSE_CIS_4622, @TERM_FALL_2025,  '001', 92004, 'Lecture', 'Open',   20, 'ENB 112', 'TR 14:00-15:15', @INSTRUCTOR_3),
 
-    (@COP2510_ID, @TERM_SPRING_2026,'001', 93001, 'Lecture', 'Open',   30, 'ENB 109', 'MW 09:30-10:45', @INSTRUCTOR_1),
-    (@COP3515_ID, @TERM_SPRING_2026,'001', 93002, 'Lecture', 'Open',   30, 'ENB 110', 'TR 11:00-12:15', @INSTRUCTOR_2),
-    (@CIS4250_ID, @TERM_SPRING_2026,'001', 93003, 'Lecture', 'Open',   25, 'ENB 111', 'MW 12:30-13:45', @INSTRUCTOR_3),
-    (@CIS4622_ID, @TERM_SPRING_2026,'001', 93004, 'Lecture', 'Open',   20, 'ENB 112', 'TR 14:00-15:15', @INSTRUCTOR_3);
+    (@COURSE_COP_2510, @TERM_SPRING_2026,'001', 93001, 'Lecture', 'Open',   30, 'ENB 109', 'MW 09:30-10:45', @INSTRUCTOR_1),
+    (@COURSE_COP_3515, @TERM_SPRING_2026,'001', 93002, 'Lecture', 'Open',   30, 'ENB 110', 'TR 11:00-12:15', @INSTRUCTOR_2),
+    (@COURSE_CIS_4250, @TERM_SPRING_2026,'001', 93003, 'Lecture', 'Open',   25, 'ENB 111', 'MW 12:30-13:45', @INSTRUCTOR_3),
+    (@COURSE_CIS_4622, @TERM_SPRING_2026,'001', 93004, 'Lecture', 'Open',   20, 'ENB 112', 'TR 14:00-15:15', @INSTRUCTOR_3);
 
 SELECT @S_F25_COP2510 = SectionID FROM Bellini.Section WHERE CRN=92001;
 SELECT @S_F25_COP3515 = SectionID FROM Bellini.Section WHERE CRN=92002;
@@ -2112,7 +2111,7 @@ SELECT @S_F25_CIS4622 = SectionID FROM Bellini.Section WHERE CRN=92004;
 
 SELECT @S_S26_COP2510 = SectionID FROM Bellini.Section WHERE CRN=93001;
 SELECT @S_S26_COP3515 = SectionID FROM Bellini.Section WHERE CRN=93002;
-*/
+
 
 ------------------------------------------------------------
 -- Enrollment: Fall 2025 (with grades)
