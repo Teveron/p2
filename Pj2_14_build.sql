@@ -547,6 +547,7 @@ DECLARE
     @COURSE_STA_2023  INT,
     @COURSE_SYG_2000  INT,
     @COURSE_THE_2000  INT,
+    @COURSE_XXX_ELECTIVE INT,
 
     -- Course Groups
     @GROUP_BSCP_2022_2023_GECH INT,
@@ -611,6 +612,23 @@ DECLARE
     @STUDENT_1 INT,
     @STUDENT_2 INT,
     @STUDENT_3 INT,
+    @STUDENT_4 INT,
+    @STUDENT_5 INT,
+    @STUDENT_6 INT,
+    @STUDENT_7 INT,
+    @STUDENT_8 INT,
+    @STUDENT_9 INT,
+    @STUDENT_10 INT,
+    @STUDENT_11 INT,
+    @STUDENT_12 INT,
+    @STUDENT_13 INT,
+    @STUDENT_14 INT,
+    @STUDENT_15 INT,
+    @STUDENT_16 INT,
+    @STUDENT_17 INT,
+    @STUDENT_18 INT,
+    @STUDENT_19 INT,
+    @STUDENT_20 INT,
 
     -- TAs
     @TA_1 INT,
@@ -876,7 +894,8 @@ VALUES
     ('PSY', '2012', 'Introduction to Psychological Science', 3, 'This course is an introduction to psychology for majors and nonmajors. It presents psychological theory and methods in a survey of various areas of psychology including clinical, cognitive, developmental, health, industrial, social and biopsychology.', 2000),
     ('STA', '2023', 'Introductory Statistics I', 3, 'Descriptive and Inferential Statistics; Principles of Probability Theory, Discrete and Continuous Probability Distributions: Binomial Probability Distribution, Poisson Probability Distribution, Uniform Probability Distribution, Normal Dist and more.', 2000),
     ('SYG', '2000', 'Principles of Sociology', 3, 'This course introduces undergraduate students to the discipline of sociology. During the semester, we will analyze sociological theories, core concepts, and issues through readings, lectures, discussions, films, and hands-on research assignments.', 2000),
-    ('THE', '2000', 'Theater and Culture', 3, 'This course explores the contributions of theater practitioners and audiences to the performance experience, aspects of theater making and an overview of theater history.', 2000)
+    ('THE', '2000', 'Theater and Culture', 3, 'This course explores the contributions of theater practitioners and audiences to the performance experience, aspects of theater making and an overview of theater history.', 2000),
+    ('XXX', 'ELECTIVE', 'Elective', 3, 'Placeholder elective', 1000);
 
 SELECT @COURSE_AMH_2020  = CourseID FROM Bellini.Course WHERE CoursePrefix = 'AMH' AND CourseNumber = '2020';
 SELECT @COURSE_ANT_2000  = CourseID FROM Bellini.Course WHERE CoursePrefix = 'ANT' AND CourseNumber = '2000';
@@ -1045,6 +1064,7 @@ SELECT @COURSE_PSY_2012  = CourseID FROM Bellini.Course WHERE CoursePrefix = 'PS
 SELECT @COURSE_STA_2023  = CourseID FROM Bellini.Course WHERE CoursePrefix = 'STA' AND CourseNumber = '2023';
 SELECT @COURSE_SYG_2000  = CourseID FROM Bellini.Course WHERE CoursePrefix = 'SYG' AND CourseNumber = '2000';
 SELECT @COURSE_THE_2000  = CourseID FROM Bellini.Course WHERE CoursePrefix = 'THE' AND CourseNumber = '2000';
+SELECT @COURSE_XXX_ELECTIVE = CourseID FROM Bellini.Course WHERE CoursePrefix = 'XXX' AND CourseNumber = 'ELECTIVE';
 
 
 ------------------------------------------------------------
@@ -2036,9 +2056,26 @@ VALUES
     ('U000000020','Charlotte','Moore', @MAJOR_BSCS,  @TERM_FALL_2023, '2024-08-20', 'cmoore@usf.edu','813-555-2020');
 
 -- For MajorHistory and TA
-SELECT @STUDENT_1  = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000003';
-SELECT @STUDENT_2  = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000004';
-SELECT @STUDENT_3 = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000010';
+SELECT @STUDENT_1  = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000001';
+SELECT @STUDENT_2  = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000002';
+SELECT @STUDENT_3  = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000003';
+SELECT @STUDENT_4  = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000004';
+SELECT @STUDENT_5  = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000005';
+SELECT @STUDENT_6  = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000006';
+SELECT @STUDENT_7  = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000007';
+SELECT @STUDENT_8  = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000008';
+SELECT @STUDENT_9  = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000009';
+SELECT @STUDENT_10 = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000010';
+SELECT @STUDENT_11 = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000011';
+SELECT @STUDENT_12 = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000012';
+SELECT @STUDENT_13 = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000013';
+SELECT @STUDENT_14 = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000014';
+SELECT @STUDENT_15 = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000015';
+SELECT @STUDENT_16 = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000016';
+SELECT @STUDENT_17 = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000017';
+SELECT @STUDENT_18 = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000018';
+SELECT @STUDENT_19 = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000019';
+SELECT @STUDENT_20 = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000020';
 
 SELECT @TA_1 = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000001';
 SELECT @TA_2 = StudentID FROM Bellini.Student WHERE USF_ID = 'U000000002';
